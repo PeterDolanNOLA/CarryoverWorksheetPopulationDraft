@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1019.33333333333,9588.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1403.33333333333,9695.33333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="24">
@@ -66,7 +66,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CY_RC-502 Data Retrieval" sap:VirtualizedContainerService.HintSize="999.333333333333,9488.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="CY_RC-502 Data Retrieval" sap:VirtualizedContainerService.HintSize="1383.33333333333,9595.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="sc:ArrayList" Default="[New ArrayList]" Name="TreasuryCodes" />
       <Variable x:TypeArguments="x:Int32" Default="1" Name="CodeCount" />
@@ -95,19 +95,19 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1341.33333333333,9326.66666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" Workbook="[Workbook]" WorkbookPath="[RC502FilePath]">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1341.33333333333,9503.33333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" Workbook="[Workbook]" WorkbookPath="[RC502FilePath]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="1307.33333333333,9218" sap2010:WorkflowViewState.IdRef="Sequence_20">
+          <Sequence sap:VirtualizedContainerService.HintSize="1307.33333333333,9394.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_20">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1265.33333333333,8923.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1265.33333333333,9100" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <Sequence.Variables>
                 <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="rowValues" />
                 <Variable x:TypeArguments="x:Int32" Name="CurrentRow" />
@@ -421,9 +421,19 @@
                       </ui:TypeInto>
                       <If Condition="[CodeCount = 1]" sap:VirtualizedContainerService.HintSize="714,283.333333333333" sap2010:WorkflowViewState.IdRef="If_1">
                         <If.Then>
-                          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBetweenKeys="10" DisplayName="Type Into 'menu item  Sort A to Z'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="%[k(enter)]">
-                            <ui:TypeInto.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="01e02e24b7507624bbcf03daf21d57b9" Selector="&lt;wnd app='excel.exe' cls='Net UI Tool Window' idx='*' /&gt;&lt;wnd cls='RICHEDIT60W' /&gt;">
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  OK'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_42" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7ad5d9365d71c509f8319edb37261a11" Selector="&lt;wnd app='excel.exe' cls='Net UI Tool Window' idx='*' /&gt;&lt;wnd cls='NetUIHWND' /&gt;&lt;ctrl name='OK' role='push button' /&gt;">
                                 <ui:Target.TimeoutMS>
                                   <InArgument x:TypeArguments="x:Int32" />
                                 </ui:Target.TimeoutMS>
@@ -431,8 +441,8 @@
                                   <InArgument x:TypeArguments="ui:WaitForReady" />
                                 </ui:Target.WaitForReady>
                               </ui:Target>
-                            </ui:TypeInto.Target>
-                          </ui:TypeInto>
+                            </ui:Click.Target>
+                          </ui:Click>
                         </If.Then>
                         <If.Else>
                           <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayBetweenKeys="10" DisplayName="Type Into 'menu item  Sort A to Z'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="%[k(down)][k(down)][k(down)] [k(enter)]">
@@ -461,6 +471,18 @@
                   </ActivityAction>
                 </ui:ForEach.Body>
               </ui:ForEach>
+              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'tab RD'" sap:VirtualizedContainerService.HintSize="1223.33333333333,134" sap2010:WorkflowViewState.IdRef="TypeInto_47" Text="[&quot;&quot; + &quot;[k(left)][k(left)][k(left)][k(left)][k(left)][k(left)][k(left)][k(left)]&quot;]">
+                <ui:TypeInto.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="a0ea74b2b871963b2efc9ec02c572cbd" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' title='RD RC 502 as of 6.30.19 - Excel' /&gt;&lt;uia automationid='RD RC 502 as of 6.30.19.xlsx' cls='ExcelGrid' name='RD RC 502 as of 6.30.19' /&gt;">
+                    <ui:Target.TimeoutMS>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:Target.TimeoutMS>
+                    <ui:Target.WaitForReady>
+                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                    </ui:Target.WaitForReady>
+                  </ui:Target>
+                </ui:TypeInto.Target>
+              </ui:TypeInto>
               <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'item  &quot;C&quot; 1'" sap:VirtualizedContainerService.HintSize="1223.33333333333,106" sap2010:WorkflowViewState.IdRef="Click_37" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
@@ -483,13 +505,13 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1223.33333333333,4436.66666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[GOACodes]">
+              <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1223.33333333333,4439.33333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[GOACodes]">
                 <ui:ForEach.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="GOA" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1186.66666666667,4302" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1186.66666666667,4304.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_28">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="ActiveRowCell" />
                         <Variable x:TypeArguments="x:String" Name="ResultsCell" />
@@ -558,11 +580,11 @@
                           <OutArgument x:TypeArguments="x:String">[CellValue]</OutArgument>
                         </ui:ExcelReadCell.Result>
                       </ui:ExcelReadCell>
-                      <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1144.66666666667,2801.33333333333" sap2010:WorkflowViewState.IdRef="DoWhile_2">
+                      <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1144.66666666667,2804" sap2010:WorkflowViewState.IdRef="DoWhile_2">
                         <DoWhile.Condition>
-                          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="CellValue &lt;&gt; Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_4" />
+                          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="CellValue = GOA.ToString" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
                         </DoWhile.Condition>
-                        <Sequence sap:VirtualizedContainerService.HintSize="1098,2638" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                        <Sequence sap:VirtualizedContainerService.HintSize="1098,2640.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_36">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -609,9 +631,9 @@
                               <InArgument x:TypeArguments="x:Double">[Convert.ToDouble(rowValues(18))]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <If Condition="[GOACodes.Contains(CurrentGOA) AND CurrentFY &gt;= now.Year - 6 AND MajClassCodes.Contains(MajClassCode)]" sap:VirtualizedContainerService.HintSize="1056,1464" sap2010:WorkflowViewState.IdRef="If_14">
+                          <If Condition="[GOA.ToString = CurrentGOA AND CurrentFY &gt;= now.Year - 6 AND MajClassCodes.Contains(MajClassCode) AND PPBCodes.Contains(CurrentPPB)]" sap:VirtualizedContainerService.HintSize="1056,1466.66666666667" sap2010:WorkflowViewState.IdRef="If_14">
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="526,1314.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                              <Sequence sap:VirtualizedContainerService.HintSize="526,1317.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -646,9 +668,9 @@
                                   <InArgument x:TypeArguments="x:Double">[CurrentFY]</InArgument>
                                   <InArgument x:TypeArguments="x:Double">[CurrentOblAmt]</InArgument>
                                 </InvokeMethod>
-                                <If Condition="[CurrentFY = now.Year - 1]" sap:VirtualizedContainerService.HintSize="484,300" sap2010:WorkflowViewState.IdRef="If_13">
+                                <If Condition="[CurrentFY = now.Year - 1]" sap:VirtualizedContainerService.HintSize="484,302.666666666667" sap2010:WorkflowViewState.IdRef="If_13">
                                   <If.Then>
-                                    <Sequence sap:VirtualizedContainerService.HintSize="304,150.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                    <Sequence sap:VirtualizedContainerService.HintSize="304,153.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_34">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="x:Double" Name="AlotAmt" />
                                       </Sequence.Variables>
@@ -657,7 +679,7 @@
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Assign sap:VirtualizedContainerService.HintSize="262,58.6666666666667" sap2010:WorkflowViewState.IdRef="Assign_21">
+                                      <Assign sap:VirtualizedContainerService.HintSize="262,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_21">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:Double">[CurAlotAmt(CurrentGOA)]</OutArgument>
                                         </Assign.To>
