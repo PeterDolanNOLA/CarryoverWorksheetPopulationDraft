@@ -3,6 +3,7 @@
   "description": "",
   "main": "CY_RC-502DataRetrieval.xaml",
   "dependencies": {
+    "Microsoft.Office.Interop.Excel": "[15.0.4795.1000]",
     "UiPath.Excel.Activities": "[2.8.1-preview]",
     "UiPath.Mail.Activities": "[1.8.1-preview]",
     "UiPath.System.Activities": "[20.2.0-preview]",

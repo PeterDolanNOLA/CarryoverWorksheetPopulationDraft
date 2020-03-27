@@ -72,7 +72,7 @@
         <OutArgument x:TypeArguments="sc:ArrayList" x:Key="out_MajClassCodes">[MajClassCodes]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke RC-502DataRetrieval workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,86.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="CY_RC-502DataRetrieval.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke RC-502DataRetrieval workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,86.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="CY_RC-502DataRetrieval - Copy.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="sc:ArrayList" x:Key="in_TreasuryCodes">[TreasuryCodes]</InArgument>
         <InArgument x:TypeArguments="sc:ArrayList" x:Key="in_GOACodes">[GOACodes]</InArgument>
