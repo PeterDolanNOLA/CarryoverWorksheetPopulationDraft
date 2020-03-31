@@ -55,6 +55,9 @@
       <Variable x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, scg:Dictionary(x:Double, x:Double)))" Name="PY" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Double)" Name="CurAlotAmt" />
       <Variable x:TypeArguments="sc:ArrayList" Name="MajClassCodes" />
+      <Variable x:TypeArguments="x:Int32" Default="2019" Name="CurrentYear" />
+      <Variable x:TypeArguments="x:String" Name="NewSheetFilePath" />
+      <Variable x:TypeArguments="x:Int32" Name="CurrentSheet" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -70,6 +73,7 @@
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, scg:Dictionary(x:Double, x:Double)))" x:Key="out_PY">[PY]</OutArgument>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Double)" x:Key="out_CurAlotAmt">[CurAlotAmt]</OutArgument>
         <OutArgument x:TypeArguments="sc:ArrayList" x:Key="out_MajClassCodes">[MajClassCodes]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_NewSheetFilePath">[NewSheetFilePath]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke RC-502DataRetrieval workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,86.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="CY_RC-502DataRetrieval - DataTableVersion.xaml">
@@ -104,6 +108,8 @@
         <InArgument x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, scg:Dictionary(x:Double, x:Double)))" x:Key="in_PY">[PY]</InArgument>
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Double)" x:Key="in_CurAlotAmt">[CurAlotAmt]</InArgument>
         <InArgument x:TypeArguments="sc:ArrayList" x:Key="in_GOACodes">[GOACodes]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_CurrentYear">[CurrentYear]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_NewSheetFilePath">[NewSheetFilePath]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
