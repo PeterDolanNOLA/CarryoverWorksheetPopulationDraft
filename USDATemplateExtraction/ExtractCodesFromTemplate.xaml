@@ -8,6 +8,7 @@
     <x:Property Name="out_CurAlotAmt" Type="OutArgument(scg:Dictionary(x:String, x:Double))" />
     <x:Property Name="out_MajClassCodes" Type="OutArgument(sc:ArrayList)" />
     <x:Property Name="out_NewSheetFilePath" Type="OutArgument(x:String)" />
+    <x:Property Name="in_WorkSheetIndex" Type="InArgument(x:Int32)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -107,7 +108,7 @@
                 <OutArgument x:TypeArguments="x:String">[SheetName]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[Workbook.GetWorkbookSheet(0)]</InArgument>
+                <InArgument x:TypeArguments="x:String">[Workbook.GetWorkbookSheet(in_WorkSheetIndex)]</InArgument>
               </Assign.Value>
             </Assign>
             <Sequence DisplayName="Get Treasury Codes" sap:VirtualizedContainerService.HintSize="604.666666666667,907.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
